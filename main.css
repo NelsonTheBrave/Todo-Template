@@ -54,14 +54,15 @@ h1 {
   font-size: 57px;
   color: black;
   text-align: center;
-  animation: h1 1s;
+  animation: h1 150ms linear 850ms;
+  animation-fill-mode: backwards;
 }
 
 @keyframes h1 {
   0% {
     opacity: 0;
   }
-  80% { opacity: 0;}
+
   100% {
     opacity: 1;
   }
@@ -82,7 +83,9 @@ h1 {
   0% {
     opacity: 0;
   }
-  80% { opacity: 0;}
+  80% {
+    opacity: 0;
+  }
   100% {
     opacity: 1;
   }
@@ -91,19 +94,20 @@ h1 {
 form {
   display: flex;
   justify-content: center;
-  animation: form 1200ms; 
+  animation: form 1200ms;
 }
 
 @keyframes form {
   0% {
     opacity: 0;
   }
-  80% { opacity: 0;}
+  80% {
+    opacity: 0;
+  }
   100% {
     opacity: 1;
   }
 }
-
 
 input {
   color: black;
@@ -151,18 +155,28 @@ button:active {
   font-size: 15px;
   font-weight: bold;
   height: 18px;
-  }
+}
 
-  #warning.blink {
-    animation: blink 950ms;
-  }
+#warning.blink {
+  animation: blink 950ms;
+}
 
 @keyframes blink {
-  0% {opacity: 1;}
-  25% {opacity: 0;}
-  50% {opacity: 1;}
-  75% {opacity: 0;}
-  100% {opacity: 1;}
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 li {
@@ -177,8 +191,14 @@ li {
 }
 
 @keyframes li {
-  from {opacity: 0; transform: translateY(30px);}
-  to {opacity: 1; transform: translateY(0px);}
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 span {
